@@ -1,4 +1,4 @@
-const assertArraysEqual = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let i;
   let flag = true;
 
@@ -7,18 +7,24 @@ const assertArraysEqual = function (arr1, arr2) {
       flag = false;
     }
   }
+  return flag;
+};
 
-  if (flag === true) {
+const assertArraysEqual = function(arr1, arr2) {
+  let chk = eqArrays(arr1, arr2);
+
+  if (chk === true) {
     console.log(`💯💯💯 Assertion Passed: ${arr1} === ${arr2}`);
   } else {
     console.log(`💀💀💀 Assertion Failed: ${arr1} !== ${arr2}`);
   }
 };
 
-const without = function (arr1, arr2) {
+const without = function(arr1, arr2) {
+  let i;
   let newArr = [];
   for (i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
+    if (!arr1.includes(arr2[i])) {
       newArr.push(arr1[i]);
     }
   }
@@ -27,6 +33,7 @@ const without = function (arr1, arr2) {
 
 console.log(without([1, 2, 3], [1]));
 console.log(without(["1", "2", "3"], [1, 2, "3"]));
+console.log(without(["hello", "world", "lighthouse"], ["lighthouse"]));
 
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); // no need to capture return value for this test case
