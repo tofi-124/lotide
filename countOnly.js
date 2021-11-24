@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`💯💯💯 Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,18 +6,18 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const countOnly = function(arrs, obj) {
-  const results = {};
-  for (const arr of arrs) {
-    if (obj[arr]) {
-      if (results[arr]) {
-        results[arr] += 1;
+const countOnly = function (allItems, itemsToCount) {
+  const result = {};
+  for (let item of allItems) {
+    if (itemsToCount[`${item}`]) {
+      if (result[item]) {
+        result[item] += 1;
       } else {
-        results[arr] = 1;
+        result[item] = 1;
       }
     }
   }
-  return results;
+  return result;
 };
 
 ///Test
