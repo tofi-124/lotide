@@ -1,4 +1,4 @@
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let i;
   let flag = [];
 
@@ -17,7 +17,7 @@ const eqArrays = function (arr1, arr2) {
   }
 };
 
-const eqObjects = function (obj1, obj2) {
+const eqObjects = function(obj1, obj2) {
   let flag = [];
   if (Object.keys(obj1).length === Object.keys(obj2).length) {
     for (let keys in obj1) {
@@ -32,6 +32,7 @@ const eqObjects = function (obj1, obj2) {
       }
     }
   } else flag.push(false);
+  //console.log(flag)
   if (flag.includes(false)) {
     return false;
   } else {
@@ -39,7 +40,7 @@ const eqObjects = function (obj1, obj2) {
   }
 };
 
-const assertObjectsEqual = function (obj1, obj2) {
+const assertObjectsEqual = function(obj1, obj2) {
   // Implement me!
   const inspect = require("util").inspect;
   let chk = eqObjects(obj1, obj2);
@@ -58,3 +59,17 @@ const assertObjectsEqual = function (obj1, obj2) {
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 assertObjectsEqual(ab, ba); // => true
+
+const abc = { a: "1", b: "2", c: "3" };
+assertObjectsEqual(ab, abc); // => false
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+assertObjectsEqual(cd, dc); // => true
+
+const cd1 = { c: "1", d: ["2", 3, 4] };
+const cd2 = { c: "1", d: ["2", 3, 4] };
+const cd3 = { c: "1", d: ["2", 2, 4] };
+assertObjectsEqual(cd, cd2); // => false
+assertObjectsEqual(cd1, cd2); // => true
+assertObjectsEqual(cd3, cd2); // => false

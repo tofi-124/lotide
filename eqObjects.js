@@ -1,12 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let i;
   let flag = [];
 
@@ -25,7 +17,7 @@ const eqArrays = function (arr1, arr2) {
   }
 };
 
-const eqObjects = function (obj1, obj2) {
+const eqObjects = function(obj1, obj2) {
   let flag = [];
   if (Object.keys(obj1).length === Object.keys(obj2).length) {
     for (let keys in obj1) {
@@ -39,7 +31,7 @@ const eqObjects = function (obj1, obj2) {
         }
       }
     }
-  } else flag.push(false)
+  } else flag.push(false);
   if (flag.includes(false)) {
     return false;
   } else {
@@ -59,7 +51,7 @@ const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 console.log(eqObjects(cd, dc)); // => true
 
-const cd1 = { c: "1", d: ["2", 3, 4] }
+const cd1 = { c: "1", d: ["2", 3, 4] };
 const cd2 = { c: "1", d: ["2", 3, 4] };
 const cd3 = { c: "1", d: ["2", 2, 4] };
 console.log(eqObjects(cd, cd2)); // => false

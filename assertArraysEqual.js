@@ -1,4 +1,4 @@
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   let i;
   let flag = [];
 
@@ -15,7 +15,7 @@ const eqArrays = function (arr1, arr2) {
   } else return true;
 };
 
-const assertArraysEqual = function (arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   let chk = eqArrays(arr1, arr2);
 
   if (chk === true) {

@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKeyByValue = function (obj, str) {
+const findKeyByValue = function(obj, str) {
   let rstr = "";
   for (let keys in obj) {
     if (obj[`${keys}`] === str) {
