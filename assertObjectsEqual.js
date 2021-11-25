@@ -8,7 +8,7 @@ const eqArrays = function(arr1, arr2) {
         flag.push(true);
       } else flag.push(false);
     }
-  } else flag.push(false);
+  } else return false;;
 
   if (flag.includes(false)) {
     return false;
@@ -31,8 +31,8 @@ const eqObjects = function(obj1, obj2) {
         }
       }
     }
-  } else flag.push(false);
-  //console.log(flag)
+  } else return false;
+  console.log(flag)
   if (flag.includes(false)) {
     return false;
   } else {
