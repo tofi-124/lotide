@@ -1,4 +1,4 @@
-const password =function (str) {
+const password = function(str) {
   str = str.split("");
   for (let i = 0; i < str.length; i++) {
     switch (str[i]) {
@@ -18,7 +18,7 @@ const password =function (str) {
   }
   str = str.join("");
   return str;
-}
+};
 
 const args = process.argv.slice(2);
 args.forEach((element) => {

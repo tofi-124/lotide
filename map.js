@@ -1,4 +1,4 @@
-const map = function (array, callback) {
+const map = function(array, callback) {
   const results = [];
   for (let item of array) {
     results.push(callback(item));
@@ -37,14 +37,14 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const testAsq = ["ox", "mother", "lamb", "tom", "apple"]
-const testAsq1 = map(testAsq, (ElementsOfTaq) => ElementsOfTaq[0]) 
+const testAsq = ["ox", "mother", "lamb", "tom", "apple"];
+const testAsq1 = map(testAsq, (ElementsOfTaq) => ElementsOfTaq[0]);
 assertArraysEqual(testAsq1, [ 'o', 'm', 'l', 't', 'a' ]);
 
-const testAsqa = ["right", "wrong", "left", "up"]
-const testAsq1a = map(testAsqa, (ElementsOfTaqa) => ElementsOfTaqa[0]) 
+const testAsqa = ["right", "wrong", "left", "up"];
+const testAsq1a = map(testAsqa, (ElementsOfTaqa) => ElementsOfTaqa[0]);
 assertArraysEqual(testAsq1a, [ 'r', 'w', 'l', 'u' ]);
 
-const testAsqb = ["pure", "dog", "came"]
-const testAsq1b = map(testAsqb, (ElementsOfTaqb) => ElementsOfTaqb[0]) 
+const testAsqb = ["pure", "dog", "came"];
+const testAsq1b = map(testAsqb, (ElementsOfTaqb) => ElementsOfTaqb[0]);
 assertArraysEqual(testAsq1b, [ 'p', 'q', 'c' ]);

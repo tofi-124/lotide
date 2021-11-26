@@ -1,12 +1,11 @@
-const takeUntil = function (array, callback) {
+const takeUntil = function(array, callback) {
   let newarr = [];
-  for(let arr of array){
-    if(callback(arr)){
-      break;
+  for (let arr of array) {
+    if (callback(arr)) {
+      return newarr;
     }
-    newarr.push(arr)
+    newarr.push(arr);
   }
-  return newarr
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

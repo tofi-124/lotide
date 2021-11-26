@@ -8,7 +8,7 @@ const eqArrays = function(arr1, arr2) {
         flag.push(true);
       } else flag.push(false);
     }
-  } else return false;;
+  } else return false;
 
   if (flag.includes(false)) {
     return false;
@@ -32,7 +32,7 @@ const eqObjects = function(obj1, obj2) {
       }
     }
   } else return false;
-  console.log(flag)
+  console.log(flag);
   if (flag.includes(false)) {
     return false;
   } else {
