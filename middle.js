@@ -9,4 +9,7 @@ const middle = function (midOfarray) {
   return remidOfarray;
 };
 
+console.log(typeof(middle([1,2,3])))
+console.log(middle([1,2,3]))
+
 module.exports = middle;

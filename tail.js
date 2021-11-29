@@ -9,5 +9,3 @@ const tail = function (tailOfarray) {
 };
 
 module.exports = tail;
-
-
