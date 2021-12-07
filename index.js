@@ -14,7 +14,6 @@ const flatten = require('./flatten');
 const letterPositions = require('./letterPositions');
 const map = require('./map');
 const mapII = require('./mapII');
-const middle = require('./middle');
 
 let indexObj = {middle, mapII, map, letterPositions, head,tail,middle, assertArraysEqual, assertEqual, countLetters, countOnly, eqArrays, eqObjects, findkey, findKeyByValue, flatten}
 module.exports =indexObj
